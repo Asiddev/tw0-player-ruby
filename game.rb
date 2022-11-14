@@ -10,9 +10,6 @@ class Game
   end
 
   def update_subtract_lives(turn)
-
-  
-
     if turn == 1
       @player1Lives -= 1
       @turn = 2
@@ -20,7 +17,6 @@ class Game
       @player2Lives -= 1
       @turn = 1
     end
-
     if (@player1Lives == 0 || @player2Lives == 0)
       if (@player1Lives == 0)
       puts "Game done ~~~~ Winner Player 2"
@@ -29,10 +25,10 @@ class Game
       end
       exit(0)
     end
-
     @round += 1
     start
   end
+
   def next_turn_correct(turn)
     if turn == 1
       @turn = 2
@@ -61,7 +57,7 @@ class Game
     if question === true
      next_turn_correct(turn)
     else
-      puts "incorrect subtract 1 switch turns"
+      # puts "incorrect subtract 1 switch turns"
       update_subtract_lives(turn)
     end
   end
