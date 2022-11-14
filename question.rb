@@ -4,7 +4,6 @@ class Question
 
   def initialize (turn)
     @turn = turn 
-    @round = 0
   end
 
 
